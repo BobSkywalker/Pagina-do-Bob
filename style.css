@@ -56,6 +56,7 @@ header a{
     justify-content: center;
     gap: 8rem;
     height: 100%;
+    animation: slideIn 1s linear;
 }
 .home-content h1{
     font-size: 6rem;
@@ -128,6 +129,23 @@ span{
     animation: cursor 0.6s infinite;
 }
 
+.about{
+    width: 900px;
+    height: 800px;
+    border: 5px solid black;
+    margin: auto;
+}
+.titulo{
+    text-align: center;
+    color: #ffd500;
+    font-size: 30pt;
+    filter: drop-shadow(10px);
+}
+.textoPrincipal{
+    font-size: 20pt;
+    font-weight: 600;
+}
+
 @keyframes cursor{
     to{
         border-left: 3px solid #ffd500;
@@ -145,3 +163,11 @@ span{
     }
 }
 
+@keyframes slideIn{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

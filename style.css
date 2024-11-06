@@ -175,34 +175,36 @@ span{
     }
 }
 
-@media(min-width: 600px) and (max-width: 992px){
+@media(max-width: 992px){
     .home-content h1{
-        font-size: 18pt;
+        font-size: 14pt;
     }
     .home-content h3{
-        font-size: 18pt;
+        font-size: 14pt;
     }
     .home-content p{
-        font-size: 14pt;
+        font-size: 11pt;
         font-weight: 600;
-        width: 400px;
+        width: 300px;
     }
     .home{
-        display: flex;
         flex-direction: column;
+        width: 417px;
+        margin-top: 50px;
     }
     .about{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 620px;
+        width: 60px;
     }
     .titulo{
-        font-size: 20pt;
+        font-size: 17pt;
+        width: 400px;
     }
     .textoPrincipal{
-        font-size: 15pt;
-        width: 600px;
+        font-size: 14pt;
+        width: 300px;
     }
 }

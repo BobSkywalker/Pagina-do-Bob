@@ -132,6 +132,7 @@ span{
     animation: cursor 0.6s infinite;
 }
 .about{
+    animation: slideIn 1s linear;
     width: 900px;
     height: 800px;
     margin: auto;
@@ -171,5 +172,37 @@ span{
     }
     to{
         transform: translateX(0px);
+    }
+}
+
+@media(min-width: 600px) and (max-width: 992px){
+    .home-content h1{
+        font-size: 18pt;
+    }
+    .home-content h3{
+        font-size: 18pt;
+    }
+    .home-content p{
+        font-size: 14pt;
+        font-weight: 600;
+        width: 400px;
+    }
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 620px;
+    }
+    .titulo{
+        font-size: 20pt;
+    }
+    .textoPrincipal{
+        font-size: 15pt;
+        width: 600px;
     }
 }

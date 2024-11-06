@@ -15,6 +15,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 header{
     width: 100%;
@@ -57,6 +58,7 @@ header a{
     gap: 8rem;
     height: 100%;
     animation: slideIn 1s linear;
+    scroll-behavior: smooth;
 }
 .home-content h1{
     font-size: 6rem;
@@ -66,6 +68,7 @@ header a{
 span{
     color: #ffd500;
     transition: 0.5s;
+    text-shadow: 1px 1px 5px #ffd500;
 }
 .home-content h3{
     font-size: 4rem;
@@ -128,21 +131,20 @@ span{
     right: -8;
     animation: cursor 0.6s infinite;
 }
-
 .about{
     width: 900px;
     height: 800px;
-    border: 5px solid black;
     margin: auto;
 }
 .titulo{
     text-align: center;
     color: #ffd500;
     font-size: 30pt;
-    filter: drop-shadow(10px);
+    text-shadow: 1px 1px 5px #ffd500;
 }
 .textoPrincipal{
-    font-size: 20pt;
+    font-size: 21pt;
+    padding: 1rem 9%;
     font-weight: 600;
 }
 

@@ -5,6 +5,16 @@
     box-sizing: border-box;
     font-family: Poppins;
 }
+:root{
+    --white-color: #edf6f9;
+    --black-color: #242423;
+    --blue: #5d9ee7;
+    --red: #d90429;
+}
+body.active{
+    background-color: var(--white-color);
+    transition: 0.5s;
+}
 html{
     font-size: 62.5%;
 }
@@ -16,6 +26,7 @@ body{
     background-repeat: no-repeat;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    transition: 0.5s;
 }
 header{
     width: 100%;
@@ -31,9 +42,29 @@ header{
 }
 header a{
     text-decoration: none;
-    color: #ffd500;
+    color: var(--blue);
     margin-left: 15px;
     font-weight: 800;
+}
+.theme{
+    text-decoration: none;
+    color: #5d9ee7;
+    margin-left: 15px;
+    font-weight: 800;
+    background-color: #242423;
+    border: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.link{
+    text-decoration: none;
+    color: #5d9ee7;
+    margin-left: 15px;
+    font-weight: 800;
+    background-color: #242423;
+    border: none;
+    font-size: 20px;
+    transition: 0.5s;
 }
 .logo{
     transition: 0.5s;
@@ -41,15 +72,7 @@ header a{
 }
 .logo:hover{
     transform: scale(1.1);
-    border-bottom: 3px #ffd500 solid ;
-}
-.link{
-    border-bottom: 3px solid transparent;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-.link:hover{
-    border-bottom: 3px #ffd500 solid;
+    text-shadow: 1px 1px 10px var(--blue)
 }
 .home{
     display: flex;
@@ -66,9 +89,9 @@ header a{
     line-height: 1.1;
 }
 span{
-    color: #ffd500;
+    color: var(--blue);
     transition: 0.5s;
-    text-shadow: 1px 1px 5px #ffd500;
+    text-shadow: 1px 1px 5px var(--blue);
 }
 .home-content h3{
     font-size: 4rem;
@@ -77,6 +100,7 @@ span{
 }
 .home-img{
     border-radius: 50%;
+    border: 6px black solid;
 }
 .home-img img{
     position: relative;
@@ -89,13 +113,14 @@ span{
     width: 700px;
 }
 .socials a{
+    transition: 0.5s;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid #ffd500;
+    border: 0.2rem solid var(--blue);
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem;
@@ -105,8 +130,8 @@ span{
 .socials a:hover{
     color: black;
     transform: scale(1.3) translateY(-5px);
-    background-color: #ffd500;
-    box-shadow: 0 0 25px #ffd500;
+    background-color: var(--blue);
+    box-shadow: 0 0 25px var(--blue);
 }
 .typing-text{
     font-size: 34px;
@@ -118,16 +143,14 @@ span{
 }
 .typing-text span::before{
     content: '';
-    color: #ffd500;
+    color: var(--blue);
     animation: words 6s infinite;
 }
 .typing-text span::after{
     content: '';
-    background-color: #242423;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border: 3px solid #242423;
     right: -8;
     animation: cursor 0.6s infinite;
 }
@@ -139,19 +162,32 @@ span{
 }
 .titulo{
     text-align: center;
-    color: #ffd500;
+    color: var(--blue);
     font-size: 30pt;
-    text-shadow: 1px 1px 5px #ffd500;
+    text-shadow: 1px 1px 5px var(--blue);
 }
 .textoPrincipal{
     font-size: 21pt;
     padding: 1rem 9%;
     font-weight: 600;
 }
+.link.active{
+    background-color: var(--white-color);
+}
+.theme.active{
+    background-color: var(--white-color);
+}
+#social.active{
+    color: var(--black-color);
+}
+.theme:hover{
+    transform: scale(1.2);
+    text-shadow: 1px 1px 10px var(--blue);
+}
 
 @keyframes cursor{
     to{
-        border-left: 3px solid #ffd500;
+        border-left: 3px solid var(--blue);
     }
 }
 @keyframes words{
@@ -206,5 +242,11 @@ span{
     .textoPrincipal{
         font-size: 14pt;
         width: 300px;
+    }
+    .logo{
+        display: none;
+    }
+    .link{
+        text-align: center;
     }
 }
